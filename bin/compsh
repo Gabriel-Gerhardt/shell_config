@@ -1,0 +1,12 @@
+compsh() {
+    VAR="$1"
+    CONFIG_PATH=~/shell_config/bin/"$VAR"
+    
+    if [ -f "$CONFIG_PATH" ]; then
+        chmod +x "$CONFIG_PATH"
+        source "$CONFIG_PATH"
+        echo "The command $VAR is ready."
+    else
+        echo "File $VAR not found!"
+    fi
+}
