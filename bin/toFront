@@ -1,0 +1,6 @@
+# ~/shell_config/bin/toFront
+toFront() {
+    echo "$1"
+}
+
+toFront
