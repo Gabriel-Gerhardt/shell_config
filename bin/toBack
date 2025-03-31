@@ -2,4 +2,3 @@ function toBack(){
     echo "I am to back"
 }
 
-toBack

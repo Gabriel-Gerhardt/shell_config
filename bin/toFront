@@ -3,4 +3,3 @@ toFront() {
     echo "$1"
 }
 
-toFront
