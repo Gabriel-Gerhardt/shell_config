@@ -1,0 +1,16 @@
+# Evita que sourceAll se chame a si mesma
+if [[ "$_sourceAll_in_progress" != "true" ]]; then
+    export _sourceAll_in_progress=true
+
+    for file in "$HOME/shell_config/bin/"*; do #Path de todos os comandos
+        if [ -f "$file" ]; then
+            source "$file"  #Source no Arquivo
+        fi
+    done
+
+    unset _sourceAll_in_progress
+fi
+
+
+
+
