@@ -8,7 +8,7 @@ toFront-> get a name as an argument, search every child directory with a similar
 
 toBack-> get a name as an argument, search every child directory with a similar name, if it finds one look to see if it has a back-end/backEnd or even back directory, look for files with extension like js or rs in a src to try to inicializate it with some command
 
-toFile-> get a name as an argument, and search until it finds a file with the same name
+goto-> get a name as an argument, and search until it finds a directory or file with the same name and go to the directory
 
 compsh-> get a name of an command as an argument, an compile and make the command ready
 

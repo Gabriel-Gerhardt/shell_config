@@ -1,7 +1,16 @@
-function toFile(){
-    name = $1
-    for i in {1..2}
-    do
-        echo name
-    done
+goto() {
+    local target="$1"
+    if [ -z "$target" ]; then
+        echo "Uso: goto <nome_diretorio>" >&2
+        return 1
+    fi
+
+    local dir
+    dir=$(~/shell_config/find_dir.py "$target")
+    if [ $? -eq 0 ] && [ -n "$dir" ]; then
+        cd "$dir" || return 1
+    else
+        echo "Diretório '$target' não encontrado." >&2
+        return 1
+    fi
 }
